@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "fileupload-firebase": {
@@ -26,7 +26,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -88,7 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
@@ -99,7 +100,8 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "e2e/tsconfig.json",
+              "tsconfig.worker.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fileupload-firebase"
+    }
+  },
+  "defaultProject": "fileupload-firebase",
+  "cli": {
+    "analytics": false
+  }
 }

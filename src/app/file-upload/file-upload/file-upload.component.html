@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <div class="container jumbotron">
+    <h3 class="mb-5">File Upload</h3>
+
+    <form class="form-group" enctype="multipart/form-data">
+
+      <input type="file" name="file" id="file" #file class="form-control" (change)="getFiles($event.target.files)">
+  
+      <button class="btn btn-primary mt-2">Save</button>
+
+    
+    </form>
+
+    <div class="primary container" style="width: 200px; height:200px;">
+        <span>{{progress}} % Uploaded</span>
+
+    </div>
+  </div>
+  
+</body>
+</html>
